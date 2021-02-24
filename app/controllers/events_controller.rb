@@ -1,5 +1,7 @@
 class EventsController < ApplicationController
-  # include 'EventsHelper'
+  #include 'EventsHelper'
+
+  before_action :authenticate_user!, except: [:index]
 
   def index
     @events = Event.all
@@ -13,7 +15,13 @@ class EventsController < ApplicationController
   end
 
   def create
-    @event = events.build(event_params)
+    @event = current_user.events.build(event_params)
+
+    if @event.save
+      redirect_to root_path
+    else
+      render 'new'
+    end
   end
 
   private
