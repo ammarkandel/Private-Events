@@ -1,5 +1,4 @@
 class EventsController < ApplicationController
-  #include 'EventsHelper'
 
   before_action :authenticate_user!, except: [:index]
 
@@ -8,6 +7,7 @@ class EventsController < ApplicationController
   end
 
   def show
+    @event = Event.find(params[:id])
   end
 
   def new
@@ -18,7 +18,7 @@ class EventsController < ApplicationController
     @event = current_user.events.build(event_params)
 
     if @event.save
-      redirect_to root_path
+      redirect_to @event
     else
       render 'new'
     end
