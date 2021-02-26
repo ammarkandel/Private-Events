@@ -30,3 +30,11 @@
 .navbar li {
   display: inline-block;
 }
+
+.h3 {
+  padding-top: 40px;
+}
+
+.attendees {
+  margin-top: 50px;
+}
