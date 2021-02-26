@@ -22,4 +22,16 @@ module ApplicationHelper
     out << link_to('Create New Event', new_event_path) if user_signed_in?
     out.html_safe
   end
+
+  def members
+    out = ''
+    out << link_to('Members', users_path) if user_signed_in?
+    out.html_safe
+  end
+
+  def my_events(current_user)
+    out = ''
+    out << link_to('My Events', user_path(current_user)) if user_signed_in?
+    out.html_safe
+  end
 end

@@ -55,7 +55,7 @@ class EventsController < ApplicationController
   def cancel_enrollment
     @event = Event.find(params[:id])
     @event.attendees.delete(current_user)
-    redirect_to @event, notice: "You are no longer attending this event"
+    redirect_to @event, notice: 'You are no longer attending this event'
   end
 
   private
