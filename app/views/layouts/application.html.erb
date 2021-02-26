@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>PrivateEventsRails</title>
+    <title>PrivateEvents</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -11,9 +11,20 @@
   </head>
 
   <body>
-    <nav>
-      <%= link_to "Create Event", new_event_path %>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+
+    <nav class='navbar'>
+      <ul>
+        <li><%= check_sign_up %></li>
+        <li><%= check_log_out %></li>
+        <li><%= check_sign_in %></li>
+      </ul>
+      <div>
+        <%= create_new_event %>
+      </div>
     </nav>
+
     <%= yield %>
   </body>
 </html>

@@ -13,3 +13,20 @@
  *= require_tree .
  *= require_self
  */
+.event {
+  height: 150px;
+  border: 1px solid black;
+  margin-top: 20px;
+}
+
+.event div {
+  padding: 5px;
+}
+
+.navbar ul {
+  list-style-type: none;
+}
+
+.navbar li {
+  display: inline-block;
+}

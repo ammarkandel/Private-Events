@@ -1,13 +1,8 @@
 class EventsController < ApplicationController
-
-  before_action :authenticate_user!, except: [:index]
+  before_action :authenticate_user!, except: [:index, :show]
 
   def index
     @events = Event.all
-  end
-
-  def show
-    @event = Event.find(params[:id])
   end
 
   def new
@@ -15,18 +10,18 @@ class EventsController < ApplicationController
   end
 
   def create
-    @event = current_user.events.build(event_params)
+    @event = current_user.created_events.build(event_params)
 
     if @event.save
-      redirect_to @event
+      redirect_to root_path, notice: 'Your event was created'
     else
-      render 'new'
+      render :new
     end
   end
 
   private
 
   def event_params
-    params.require(:event).permit(:name, :date, :location, :description, :user_id)
+    params.require(:event).permit(:title, :description, :date_time, :location)
   end
 end
