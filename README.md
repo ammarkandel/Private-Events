@@ -1,7 +1,5 @@
 # Private Events
 
-This project built to let users share there ideas.
-
 ## About
 
 This project is a Private Events app. The idea is to create an app where the members of the website can publish events, attend events.
