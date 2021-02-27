@@ -6,11 +6,21 @@ This project is a Private Events app. The idea is to create an app where the mem
 
 ## Usage
 
-- Clone the repository: "git@github.com:ammarkandel/Private-Events.git".
-- Move inside the Private-Events folder: "cd Private-Events".
-- Run "rails db:create" and "rails db:migrate".
-- Then run server "rails s".
-- To see the app on your local machine open your browser and type: "http://localhost:3000"
+- Clone the repository:
+
+```
+ git clone https://github.com/ammarkandel/Private-Events.git
+```
+
+- Move inside the Private-Events folder:
+
+```
+cd Private-Events
+```
+
+- Run `rails db:create` and `rails db:migrate`.
+- Then run server `rails s`.
+- To see the app on your local machine open your browser and type: `http://localhost:3000`
 
 ## Technologies
 
@@ -40,3 +50,7 @@ Give a ⭐️ if you like this project!
 ## 📝 License
 
 This project is [MIT](LICENSE) licensed.
+
+```
+
+```
