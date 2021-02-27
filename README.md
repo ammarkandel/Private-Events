@@ -1,24 +1,44 @@
-# README
+# Private Events
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This project built to let users share there ideas.
 
-Things you may want to cover:
+## About
 
-- Ruby version
+This project is a Private Events app. The idea is to create an app where the members of the website can publish events, attend events.
 
-- System dependencies
+## Usage
 
-- Configuration
+- Clone the repository: "git@github.com:ammarkandel/Private-Events.git".
+- Move inside the Private-Events folder: "cd Private-Events".
+- Run "rails db:create" and "rails db:migrate".
+- Then run server "rails s".
+- To see the app on your local machine open your browser and type: "http://localhost:3000"
 
-- Database creation
+## Technologies
 
-- Database initialization
+- Ruby
+- Rails
+- SQLite3
+- css
+- scss
+- html
 
-- How to run the test suite
+## Author
 
-- Services (job queues, cache servers, search engines, etc.)
+👤 **Ammar El refay Kandel**
 
-- Deployment instructions
+- GitHub: [ammarkandel](https://github.com/ammarkandel)
+- Twitter: [@AmmarQandel](https://twitter.com/AmmarQandel)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/ammar-kandel-7b4100193/)
 
-- ...
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## 📝 License
+
+This project is [MIT](LICENSE) licensed.
