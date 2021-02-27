@@ -1,6 +1,4 @@
-<% if @event.date_time < Time.now %>
-  <div class="alert alert-secondary" role="alert">Registration for this event is now closed</div>
-<% end %>
+<%= check_event(@event) %>
 
 <p>Created by : <%= @event.creator.name %></p>
 <p>title: <%= @event.title.titleize %></p>
@@ -11,7 +9,6 @@
 <ul class="access">
   <li><%= check_access(@event, current_user) %></li>
 </ul>
-
 
 <p class="attendees">ATTENDEES</p>
 
