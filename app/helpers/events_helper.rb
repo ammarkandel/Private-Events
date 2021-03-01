@@ -7,7 +7,7 @@ module EventsHelper
     elsif event.attendees.include?(current_user)
       out << link_to('Cancel Enrollment', cancel_enrollment_event_path, class: 'enrollment-btn')
     else
-      out << link_to('Enrollment', enrollment_event_path, class: 'enrollment-btn') unless event.date_time < Time.now
+      out << link_to('Enrollment', enrollment_event_path, class: 'enrollment-btn')
     end
     out.html_safe
   end
@@ -21,12 +21,6 @@ module EventsHelper
         out << "<p>#{attendee.name}</p>"
       end
     end
-    out.html_safe
-  end
-
-  def check_event(event)
-    out = ''
-    out << '<p> Registration closed </p>' if event.date_time < Time.now
     out.html_safe
   end
 end
