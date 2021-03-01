@@ -10,9 +10,9 @@
     </div>
   </div>
   <div>
-    <p class="text-muted"> <%= pluralize(@user.attended_events.count, 'event').upcase %> ATTENDED</p>
+    <p class="text-muted"> <%= pluralize(@user_attended_events.count, 'event').upcase %> ATTENDED</p>
     <div>
-        <% @user.attended_events.each do |event| %>
+        <% @user_attended_events.each do |event| %>
           <%= link_to event.title, event_path(event) %>
         <% end %>
     </div>
