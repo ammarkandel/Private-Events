@@ -1,4 +1,4 @@
-require 'rails_helper.rb'
+require 'rails_helper'
 
 RSpec.configure do |config|
   config.include FactoryBot::Syntax::Methods
