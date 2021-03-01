@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe Event, type: :model do
+RSpec.describe Event, type: :model do
   describe 'associations' do
     it { should belong_to(:creator).class_name('User') }
     it { should have_many(:enrollments) }
