@@ -8,6 +8,6 @@ Rails.application.routes.draw do
       get 'cancel_enrollment'
     end
   end
-  resources :events
+  resources :events, only: [:edit, :show, :index, :new, :create]
   root 'events#index'
 end
