@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 Rails.application.routes.draw do
   devise_for :users, controllers: { registrations: 'registrations' }
   get '/user/:id', to: 'users#profile', as: :user
@@ -8,6 +10,6 @@ Rails.application.routes.draw do
       get 'cancel_enrollment'
     end
   end
-  resources :events, only: [:edit, :show, :index, :new, :create]
+  resources :events, only: %i[edit show index new create]
   root 'events#index'
 end
