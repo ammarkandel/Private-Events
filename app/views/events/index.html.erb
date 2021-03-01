@@ -1,7 +1,7 @@
 <h1>Events</h1>
 
 <h3>FUTURE EVENTS</h3>
-<% Event.future.each do |event| %>
+<% @upcoming_events.each do |event| %>
 <div class="event">
     <p>title: <%= event.title %></p>
     <p>description: <%= event.description %></p>
@@ -12,7 +12,7 @@
 <% end %>
 
 <h3>PAST EVENTS</h3>
-<% Event.past.each do |event| %>
+<% @past_events.each do |event| %>
 <div class="event">
     <p>title: <%= event.title %></p>
     <p>description: <%= event.description %></p>
