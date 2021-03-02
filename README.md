@@ -17,7 +17,7 @@ This project is a Private Events app. The idea is to create an app where the mem
 ```
 cd Private-Events
 ```
-
+- Run `bundle install`.
 - Run `rails db:create` and `rails db:migrate`.
 - Then run server `rails s`.
 - To see the app on your local machine open your browser and type: `http://localhost:3000`
@@ -28,7 +28,6 @@ cd Private-Events
 - Rails
 - SQLite3
 - css
-- scss
 - html
 
 ## Author
