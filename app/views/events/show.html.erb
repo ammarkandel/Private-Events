@@ -1,0 +1,15 @@
+<p>Created by : <%= @event.creator.name %></p>
+<p>title: <%= @event.title.titleize %></p>
+<p>description: <%= @event.description %></p>
+<p>location: <%= @event.location %></p>
+<p>date: <%= @event.date_time %></p>
+
+<ul class="access">
+  <li><%= check_access(@event, current_user) %></li>
+</ul>
+
+<p class="attendees">ATTENDEES</p>
+
+<div>
+  <%= check_attendees(@event) %>
+</div>
